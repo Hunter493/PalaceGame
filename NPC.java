@@ -10,15 +10,15 @@ public class NPC {
     Card[] down = new Card[3];
     List<Card> hand = new ArrayList<>();
 
-    public NPC(Deck deck){
+    public NPC(){
         for (int i = 0; i < down.length; i++){
-            down[i] = deck.deal();
-            up[i] = deck.deal();
-            hand.add(deck.deal());
+            down[i] = GameGUI.board.getDeck().deal();
+            up[i] = GameGUI.board.getDeck().deal();
+            hand.add(GameGUI.board.getDeck().deal());
         }
     }
 
     public void play(){
-
+        
     }
 }

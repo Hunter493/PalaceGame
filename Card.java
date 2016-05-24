@@ -30,11 +30,15 @@ public class Card {
         return imageFront;
     }
 
-    public ImageIcon getImageBack () {
+    public static ImageIcon getImageBack () {
         return imageBack;
     }
 
     public boolean matchesRank(Card card){
         return (card.getRank().equals(this.getRank()));
+    }
+
+    public boolean isBigger(Card card){
+        return card.getRank().num > this.getRank().num;
     }
 }
